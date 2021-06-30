@@ -1,86 +1,86 @@
 $height-header: 60px;
 header {
-	width: 100%;
-	height: $height-header;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 10;
-	background: rgba(140, 220, 232, 0.25);
-	box-shadow: 0 3px 10px 0 rgba(31, 38, 135, 0.37);
-	// backdrop-filter: blur(4px);
-	// -webkit-backdrop-filter: blur(4px);
-	border: 1px solid rgba(255, 255, 255, 0.18);
-	.container-fluid {
-		height: 100%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		.logo {
-			height: 100%;
-			@include midflex();
-			a {
-				display: flex;
-				@include midflex();
-				img {
-					width: 40px;
-					height: 100%;
-					margin-right: 10px;
-				}
-				h1 {
-					@include text(16px, Pb, normal, $white-cl, uppercase);
-				}
-			}
-		}
-		.menu {
-			height: 100%;
-			ul {
-				display: flex;
-				height: 100%;
-				li {
-					height: 100%;
-					a {
-						margin: 0 30px;
-						@include midflex();
-						height: 100%;
-						// line-height: 24px;
-						@include text(16px, Pb, normal, $white-cl, uppercase);
-						@include transition(0.3s);
-						position: relative;
-						overflow: hidden;
-						&::after {
-							content: "";
-							background: hsl(191, 62%, 55%);
-							height: 3px;
-							position: absolute;
-							bottom: 10px;
-							width: 0%;
-							right: 0;
-							transition: all 0.3s ease;
-						}
-						&:hover {
-							&::after {
-								content: "";
-								left: 0;
-								width: 100%;
-								transition: all 0.3s ease;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	// @include desktop {
+  width: 100%;
+  height: $height-header;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(140, 220, 232, 0.25);
+  box-shadow: 0 3px 10px 0 rgba(31, 38, 135, 0.37);
+  // backdrop-filter: blur(4px);
+  // -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  .container-fluid {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      height: 100%;
+      @include midflex();
+      a {
+        display: flex;
+        @include midflex();
+        img {
+          width: 40px;
+          height: 100%;
+          margin-right: 10px;
+        }
+        h1 {
+          @include text(16px, Pb, normal, $white-cl, uppercase);
+        }
+      }
+    }
+    .menu {
+      height: 100%;
+      ul {
+        display: flex;
+        height: 100%;
+        li {
+          height: 100%;
+          a {
+            margin: 0 30px;
+            @include midflex();
+            height: 100%;
+            // line-height: 24px;
+            @include text(16px, Pb, normal, red, uppercase);
+            @include transition(0.3s);
+            position: relative;
+            overflow: hidden;
+            &::after {
+              content: "";
+              background: hsl(191, 62%, 55%);
+              height: 3px;
+              position: absolute;
+              bottom: 10px;
+              width: 0%;
+              right: 0;
+              transition: all 0.3s ease;
+            }
+            &:hover {
+              &::after {
+                content: "";
+                left: 0;
+                width: 100%;
+                transition: all 0.3s ease;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // @include desktop {
 
-	// }
-	// @include tablet {
+  // }
+  // @include tablet {
 
-	// }
-	// @include mobile {
+  // }
+  // @include mobile {
 
-	// }
-	// @include mobile-xxs {
+  // }
+  // @include mobile-xxs {
 
-	// }
+  // }
 }
