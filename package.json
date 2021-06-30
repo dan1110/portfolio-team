@@ -21,6 +21,7 @@
     "load-grunt-tasks": "^5.1.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3"
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "swiper": "^6.7.1"
   }
 }

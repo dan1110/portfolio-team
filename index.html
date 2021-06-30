@@ -17,11 +17,15 @@
     <meta property="og:site_name" content="" />
     <meta property="og:image" content="" />
 
-    <link rel="stylesheet" href="dest/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="dest/fonts.css">
     <link rel="stylesheet" href="dest/stylelibs.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dest/style.min.css">
 </head>
+<style>
+
+</style>
 
 <body>
     <header>
@@ -63,9 +67,21 @@
                     <span>product design team ?</span>
                 </div>
             </div>
-            <div class="slider-right"></div>
+            <div class="slider-right">
+                <div class="swiper-container mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                    </div>
+
+
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
         </section>
     </main>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script type="text/javascript" src="dest/jsmain.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
