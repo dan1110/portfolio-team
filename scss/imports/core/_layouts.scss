@@ -1,3 +1,10 @@
+:root {
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
+}
+
+/* This changes all the animations globally */
+
 * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -11,23 +18,22 @@
 
 html,
 body {
-    // font-family: Pr;
+    --pdSection: 60px;
+    // cursor: none;
     width: 100%;
     max-width: $max-width;
     -webkit-font-smoothing: antialiased;
     margin: auto;
-    @include text($fz-text, fmain, $lh-text, $text-cl, none);
-    background: $white-cl;
+    // background: white;
     position: relative;
-    // @include custom-scrollbar();
-    --pdSection: 0px;
+    @include custom-scrollbar();
     .mainwrapper {
         width: 100%;
         margin: auto;
         overflow: hidden;
-        section {
-            padding: var(--pdSection);
-        }
+    }
+    .pd {
+        padding: var(--pdSection) 0;
     }
     @include desktop {
     }

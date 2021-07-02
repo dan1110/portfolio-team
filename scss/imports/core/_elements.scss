@@ -12,23 +12,42 @@ strong {
     font-family: bb;
 }
 
-.-lv1 {
-    @include text(100px, b, 100px, $white-cl, none);
-    font-weight: normal;
-    margin: 0;
-    a {
-        @include text(100px, g, 100px, $white-cl, none);
-    }
-    @include tablet {
-    }
-    @include mobile {
-    }
-}
-
-.button{
-
-}
-
-.arrow{
-    
-}
+// .btn-learmore {
+//     display: inline-flex;
+//     font-family: Pb;
+//     letter-spacing: 2px;
+//     position: relative;
+//     font-size: 14px;
+//     text-transform: uppercase;
+//     cursor: pointer;
+//     img {
+//         margin-left: 10px;
+//     }
+//     span {
+//         opacity: 1;
+//         &:hover {
+//             opacity: 0.6;
+//             @include transition($t);
+//         }
+//     }
+//     &::before {
+//         content: "";
+//         position: absolute;
+//         width: 35px;
+//         height: 4px;
+//         display: block;
+//         background-color: $primary-cl;
+//         bottom: -10px;
+//         left: 0;
+//     }
+//     img {
+//         @include transform(translateX(0));
+//         @include transition($t);
+//     }
+//     &:hover {
+//         img {
+//             @include transform(translateX(10px));
+//             @include transition($t);
+//         }
+//     }
+// }
