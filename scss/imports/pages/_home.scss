@@ -63,11 +63,13 @@
 }
 
 .about {
-  width: auto;
+  width: 100%;
   height: 100vh;
   background: $white-cl;
   display: flex;
+
   justify-content: space-between;
+
   &__left {
     width: 65%;
     height: 100%;
