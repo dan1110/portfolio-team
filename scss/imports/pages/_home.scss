@@ -67,7 +67,7 @@
   height: 100vh;
   background: $white-cl;
   display: flex;
-
+  justify-content: space-between;
   &__left {
     width: 65%;
     height: 100%;
@@ -157,9 +157,10 @@
     }
   }
   &__right {
-    width: 35%;
+    // width: 35%;
     height: 100%;
-    @include midflex();
+    display: flex;
+    justify-content: space-between;
     &-img {
       min-width: 250px;
       min-height: 250px;
