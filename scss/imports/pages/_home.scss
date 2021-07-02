@@ -1,5 +1,5 @@
 .slider {
-  min-width: 100vw;
+  min-width: auto;
   min-height: 100vh;
   display: flex;
   &-left {
@@ -45,6 +45,10 @@
         line-height: 1;
         text-transform: uppercase;
         font-size: 58px;
+        -webkit-user-select: none; /* Chrome all / Safari all */
+        -moz-user-select: none; /* Firefox all */
+        -ms-user-select: none; /* IE 10+ */
+        user-select: none;
       }
       span:nth-child(1) {
         font-size: 24px;
@@ -54,46 +58,122 @@
   }
   &-right {
     min-width: 75%;
+    background-color: hsl(188, 67%, 73%);
+  }
+}
 
-    .swiper-container {
-      width: 100%;
-      height: 100%;
-    }
+.about {
+  width: auto;
+  height: 100vh;
+  background: $white-cl;
+  display: flex;
 
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background-color: hsl(115, 42%, 73%);
-
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-      &:first-child {
-        background-color: hsl(188, 67%, 73%);
+  &__left {
+    width: 65%;
+    height: 100%;
+    padding-right: 10px;
+    &-title {
+      @include text(56px, Pb, normal, $primary-cl, uppercase);
+      letter-spacing: 8px;
+      padding-bottom: 15px;
+      position: relative;
+      width: max-content;
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: linear-gradient(to right, $primary-cl, transparent);
+        left: 0;
+        bottom: 18px;
+        height: 6px;
+        width: 100%;
       }
-      &:last-child {
-        background-color: hsl(337, 85%, 83%);
+    }
+    &-text {
+      h3 {
+        @include text(28px, Pb, normal, $text-cl, normal);
+        margin-bottom: 15px;
+        text-align: justify;
+      }
+      p {
+        @include text(20px, Pr, normal, $text-cl, normal);
+        margin-bottom: 10px;
+        text-align: justify;
       }
     }
+    .btn-main {
+      .center {
+        width: 180px;
+        height: 60px;
+        position: absolute;
+        border: 1px solid #91c9ff;
+        @include midflex();
+      }
 
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
+      .btn {
+        position: relative;
+        width: 180px;
+        height: 60px;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        outline: none;
+        transition: 1s ease-in-out;
+      }
+
+      svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        fill: none;
+        stroke: $primary-cl;
+        stroke-dasharray: 150 480;
+        stroke-dashoffset: 150;
+        transition: 1s ease-in-out;
+      }
+
+      .btn:hover {
+        transition: 1s ease-in-out;
+        span {
+          color: $primary-cl;
+          font-family: Pb;
+          letter-spacing: 2px;
+          font-size: 16px;
+        }
+        &::before {
+          opacity: 0;
+        }
+      }
+
+      .btn:hover svg {
+        stroke-dashoffset: -480;
+      }
+
+      .btn span {
+        color: #4f95da;
+        font-family: Pb;
+        letter-spacing: 2px;
+        font-size: 16px;
+      }
+    }
+  }
+  &__right {
+    width: 35%;
+    height: 100%;
+    @include midflex();
+    &-img {
+      min-width: 250px;
+      min-height: 250px;
+      position: relative;
       object-fit: cover;
-    }
-    .swiper-pagination-bullet-active {
-      background: $white-cl !important;
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+        display: block;
+        max-width: 100%;
+      }
     }
   }
 }

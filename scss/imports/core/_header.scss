@@ -6,11 +6,11 @@ header {
 	top: 0;
 	left: 0;
 	z-index: 10;
-	background: rgba(140, 220, 232, 0.25);
-	box-shadow: 0 3px 10px 0 rgba(31, 38, 135, 0.37);
+	// background: rgba(140, 220, 232, 0.25);
+	// box-shadow: 0 3px 10px 0 rgba(31, 38, 135, 0.37);
 	// backdrop-filter: blur(4px);
 	// -webkit-backdrop-filter: blur(4px);
-	border: 1px solid rgba(255, 255, 255, 0.18);
+	// border: 1px solid rgba(255, 255, 255, 0.18);
 	.container-fluid {
 		height: 100%;
 		display: flex;
@@ -20,6 +20,8 @@ header {
 			height: 100%;
 			@include midflex();
 			a {
+				cursor: none;
+
 				display: flex;
 				@include midflex();
 				img {
@@ -40,6 +42,8 @@ header {
 				li {
 					height: 100%;
 					a {
+						cursor: none;
+
 						margin: 0 30px;
 						@include midflex();
 						height: 100%;
