@@ -1,44 +1,45 @@
 :root {
-    --animate-duration: 800ms;
-    --animate-delay: 0.9s;
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
 }
 
 /* This changes all the animations globally */
 
 * {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    box-sizing: border-box;
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 
 html,
 body {
-    --pdSection: 60px;
-    // cursor: none;
+  --pdSection: 60px;
+  cursor: none;
+  width: 100%;
+  max-width: $max-width;
+  -webkit-font-smoothing: antialiased;
+  margin: auto;
+  // background: white;
+  position: relative;
+  overflow: hidden;
+  @include custom-scrollbar();
+  .mainwrapper {
     width: 100%;
-    max-width: $max-width;
-    -webkit-font-smoothing: antialiased;
     margin: auto;
-    // background: white;
-    position: relative;
-    @include custom-scrollbar();
-    .mainwrapper {
-        width: 100%;
-        margin: auto;
-        overflow: hidden;
-    }
-    .pd {
-        padding: var(--pdSection) 0;
-    }
-    @include desktop {
-    }
-    @include tablet {
-    }
-    @include mobile {
-    }
+    overflow: hidden;
+  }
+  .pd {
+    padding: var(--pdSection) 0;
+  }
+  @include desktop {
+  }
+  @include tablet {
+  }
+  @include mobile {
+  }
 }

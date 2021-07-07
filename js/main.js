@@ -1,6 +1,6 @@
 let cursor = $('.cursor');
-let title = $('.slider-left__text');
-let hover = $('.hover, .logo');
+let title = $('.slider__left-text');
+let hover = $('.hover, .logo, .list-social');
 
 $(window).on('mousemove', function (e) {
     console.log('mousemove');
